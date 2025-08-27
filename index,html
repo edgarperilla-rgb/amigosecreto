@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amigo Secreto — ALURA style</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>🎁 Amigo Secreto</h1>
+      <p class="sub">Agrega nombres a la lista y realiza el sorteo. (Lógica tipo ALURA)</p>
+    </header>
+
+    <!-- Entrada de datos -->
+    <section class="panel">
+      <label for="nombreInput" class="label">Nombre del participante</label>
+      <div class="row">
+        <input id="nombreInput" type="text" placeholder="Ej: Ana, Juan, Sofía..." autocomplete="off"/>
+        <button id="btnAgregar" class="btn">Agregar</button>
+      </div>
+      <p class="help">Pulsa <kbd>Enter</kbd> para agregar rápidamente.</p>
+      <p id="mensaje" class="mensaje" role="alert" aria-live="polite"></p>
+    </section>
+
+    <!-- Lista actual de amigos -->
+    <section class="panel">
+      <div class="row-between">
+        <h2>Participantes</h2>
+        <span id="contador" class="pill">0</span>
+      </div>
+      <ul id="listaAmigos" class="list"></ul>
+    </section>
+
+    <!-- Acciones -->
+    <section class="panel actions">
+      <button id="btnSortear" class="btn primary" disabled>🎲 Sortear</button>
+      <button id="btnReiniciar" class="btn outline" disabled>↺ Reiniciar</button>
+    </section>
+
+    <!-- Resultado e historial -->
+    <section class="panel">
+      <h2>Resultado</h2>
+      <div id="resultado" class="resultado" aria-live="polite"></div>
+
+      <h3>Historial de sorteos</h3>
+      <ul id="historialSorteos" class="list small"></ul>
+    </section>
+
+    <footer class="footer">
+      <small>Hecho con HTML, CSS y JS. Basado en la lógica del curso ALURA.</small>
+    </footer>
+  </main>
+
+  <script defer src="app.js"></script>
+</body>
+</html>
